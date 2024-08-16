@@ -78,10 +78,10 @@ class _HomeViewState extends State<HomeView> {
                     ),
                     SizedBox(height: 2.h),
                     Container(
-                      height: 23.h,
+                      height: 22.h,
                       width: double.infinity,
                       color: Colors.white,
-                      padding: EdgeInsets.symmetric(vertical: 1.h),
+                      padding: EdgeInsets.symmetric(vertical: 1.sp),
                       child: GridView.builder(
                         shrinkWrap: true,
                         physics: const NeverScrollableScrollPhysics(),
@@ -95,8 +95,8 @@ class _HomeViewState extends State<HomeView> {
                           return Column(
                             children: [
                               Container(
-                                height: 7.h,
-                                width: 20.w,
+                                height: 6.h,
+                                width: 21.w,
                                 decoration: BoxDecoration(
                                   shape: BoxShape.circle,
                                   border: Border.all(
@@ -111,7 +111,7 @@ class _HomeViewState extends State<HomeView> {
                                   ),
                                 ),
                               ),
-                              SizedBox(height: 1.h),
+                              SizedBox(height: 0.5.h),
                               Text(
                                 categories[index],
                                 style: TextStyle(
@@ -170,7 +170,9 @@ class _HomeViewState extends State<HomeView> {
                       actionLabel: 'Создать обявление',
                       onPressed: () {},
                     ),
-                    SizedBox(height: 2.h),
+                    SizedBox(
+                      height: 2.h,
+                    ),
                     GestureDetector(
                       onTap: () {
                         Navigator.push(
@@ -180,9 +182,11 @@ class _HomeViewState extends State<HomeView> {
                           ),
                         );
                       },
-                      child: const Expanded(child: ProductGrid()),
+                      child: const ProductGrid(), // Убрали Expanded
                     ),
-                    SizedBox(height: 2.h),
+                    SizedBox(
+                      height: 2.h,
+                    ),
                   ],
                 ),
               ),
@@ -309,7 +313,7 @@ class ProductCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 35.h,
+      height: 37.h,
       width: double.infinity,
       decoration: BoxDecoration(
         color: Colors.white,

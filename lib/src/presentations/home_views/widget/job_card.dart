@@ -63,7 +63,7 @@ class JobCard extends StatelessWidget {
               style: TextStyle(fontSize: 15.sp, color: Colors.black),
             ),
             SizedBox(height: 1.h),
-            Row(
+            Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
